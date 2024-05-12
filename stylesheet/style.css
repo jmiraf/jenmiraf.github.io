@@ -1,0 +1,146 @@
+/* Body */
+body {
+    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+	font-family: 'Nunito';font-size: 15px;
+	 -webkit-backface-visibility: hidden;
+}
+
+
+.animated-title {
+  color: #C71585;
+  font-family: Poppins;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 6vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+font-family: Impact; font-size: 80px;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: #48D1CC;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+font-family: Impact; font-size: 30px;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+color: #4B0082;
+}
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* social media */
+.fa {
+padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #55ACEE;
+}
+
+.fa-instagram {
+  color: #f40083;
+}
+
+.fa-linkedin {
+  color: #0082ca;
+}
+/* Image elements */
+img {
+
+    border-radius: 8px; /* Gives all images slightly rounded corners */
+    max-width: 100%; /* Ensures all images stay within the width of their container */
+    height: 200px; /* Sets the height of all images */
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+    margin-right: auto;
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(25%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s; /* Transition lasts 1 second */
+	transform: scale(1.1); /* Image is increased slightly when hovered over */
+}
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+.Column_1 {
+    float: left;
+    width: 40%; /* This ensures the column takes up half of the page width */
+    padding: 40px;
+    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    height: 450px; /* This sets the height of the column -  this may need to be adjusted depending on the text you enter */
+    
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 60%;
+    padding: 20px;
+    padding-top: 1.9%;
+    height: 450px;
+}
