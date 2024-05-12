@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Bootstrap 4 Project</title>
+  </head>
+  <body>
+    <div class="container">
+		<!-- Navbar -->
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		
+		<!--
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		!-->
+		<a class="navbar-brand">
+    		<img src="images/logo.png" height="40" alt=""> 
+		</a>
+		
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link text-dark" href="#Home">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-dark" href="#Showtimes">Showtimes</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-dark" href="#Deals">Deals</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Placeholder
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="#">One</a>
+				  <a class="dropdown-item" href="#">Two</a>
+				  <div class="dropdown-divider"></div>
+				  <a class="dropdown-item" href="#">Three</a>
+				</div>
+			  </li>
+			 
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-dark my-2 my-sm-0 text-light" type="submit">Search</button>
+			</form>
+		  </div>
+		</nav>
+		
+		<!-- Jumbotron -->
+		<div class="jumbotron jumbotron-fluid bg-info">
+		  <div class="container" id="Home">
+			<h1 class="display-4 text-center">A STORY YOU HAVE TO BELIEVE TO SEE</h1>
+			<p align="center">
+			<iframe width="760" height="415" src="https://www.youtube.com/embed/3CZv_bV261w?si=k5R067zAATBDkUYW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</p>
+			<p class="lead text-center">Advance Tickets Available</p>
+		  </div>
+		</div>
+		
+		<!-- Columns -->
+		<div class="container">
+			<div class="row" id="Showtimes">
+				<div class="col-sm">
+				  <img src="images/IF.jpg" class="img-thumbnail" alt="IF movie">
+				</div>
+				<div class="col-sm">
+					<p>GENRE: Comedy</p>
+				  <p>
+				  From writer and director John Krasinski, IF is about a girl who discovers that she can see everyone’s imaginary friends — and what she does with that superpower — as she embarks on a magical adventure to reconnect forgotten IFs with their kids. IF stars Ryan Reynolds, John Krasinski, Cailey Fleming, Fiona Shaw, and the voices of Phoebe Waller-Bridge, Louis Gossett Jr. and Steve Carell alongside many more as the wonderfully unique characters that reflect the incredible power of a child’s imagination.
+				  </p>
+				</div>
+				<div class="col-sm">
+					<h3 class="text-danger">Now Playing</h3>
+					<ul class="list-group list-group-flush">
+					  <li class="list-group-item"><a class="nav-link" href="#Fallguy">The Fall Guy</a></li>
+					  <li class="list-group-item"><a class="nav-link" href="#Kungfu">Kungfu Panda 4</a></li>
+					  <li class="list-group-item"><a class="nav-link" href="#Godzilla">Godzilla x Kong</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+		
+		<!-- Cards -->
+		<p class="my-5"><h1>SHOWTIMES</h1></p>
+		 <div class="row">
+			<div class="col">
+				<div class="card" style="width: 20rem;" id="Fallguy">
+				  <img class="card-img-top" src="images/Fall_guy.jpg?text=Image cap" height="450" alt="Card image cap">
+				  <div class="card-body">
+					<h3 class="card-title">The Fall Guy</h3>
+					<p class="card-text">GENRE: Action, Adaptation, Adventure
+					<br>
+					CAST: Ryan Gosling, Emily Blunt
+					</p>
+					<span class="badge badge-pill badge-primary">10:00</span>
+					<span class="badge badge-pill badge-success">3:00</span>
+					<span class="badge badge-pill badge-warning">6:00</span>
+					<span class="badge badge-pill badge-info">9:00</span>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;" id="Kungfu">
+				  <img class="card-img-top" src="images/kungfu_panda.jpg?text=Image cap" height="450" alt="Card image cap">
+				  <div class="card-body">
+					<h3 class="card-title">Kungfu Panda 4</h3>
+					<p class="card-text">GENRE: Animation, Family
+					<br>
+					CAST: Jack Black
+					</p>
+					<span class="badge badge-pill badge-primary">10:00</span>
+					<span class="badge badge-pill badge-success">3:00</span>
+					<span class="badge badge-pill badge-warning">6:00</span>
+					<span class="badge badge-pill badge-info">9:00</span>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;" id="Godzilla">
+				  <img class="card-img-top" src="images/godzilla.jpg?text=Image cap" height="450" alt="Card image cap">
+				  <div class="card-body">
+					<h3 class="card-title">Godzilla x Kong</h3>
+					<p class="card-text">GENRE: Action, Adventure
+					<br>
+					CAST: Dan Stevens, Rebecca Hall
+					</p>
+					<span class="badge badge-pill badge-primary">10:00</span>
+					<span class="badge badge-pill badge-success">3:00</span>
+					<span class="badge badge-pill badge-warning">6:00</span>
+					<span class="badge badge-pill badge-info">9:00</span>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+	
+		<!-- Form -->
+		<div class="row my-5">
+		  <div class="col-sm-6">
+			<div class="card bg-light" style="width: 30rem;">
+			  <div class="card-body">
+				<form>
+				<h1 class="text-primary">Sign up for rewards!</h1>
+				<div class="form-group" id="Deals">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com">
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			  </div>
+			</div>
+		  </div>
+			<div class="col-sm-6">
+			<!--
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Special title treatment</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			  </div>
+			 !-->
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div class="text-right py-5">
+			<nav class="nav text-monospace bg-dark">
+			  <a class="nav-link active text-light" href="#">Website</a>
+			  <a class="nav-link text-light" href="#">Facebook</a>
+			  <a class="nav-link text-light" href="#">Instagram</a>
+			  <a class="nav-link text-light" href="#">Twitter</a>
+			</nav>
+		</div>
+	
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
