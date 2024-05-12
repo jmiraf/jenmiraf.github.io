@@ -1,18 +1,21 @@
 /* Body */
 body {
     margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
-	font-family: 'Nunito';font-size: 15px;
+	font-family: 'Nunito'; font-size: 15px;
 	 -webkit-backface-visibility: hidden;
 }
+
+div.relative {
+  position: relative;
+} 
 
 
 .animated-title {
   color: #C71585;
-  font-family: Poppins;
-  height: 90vmin;
+  height: 70vmin;
   left: 50%;
   position: absolute;
-  top: 40%;
+  top: 45%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }
@@ -29,7 +32,7 @@ body {
 }
 .animated-title > div div span {
   display: block;
-font-family: Impact; font-size: 80px;
+font-family: Impact; font-size: 70px;
 }
 .animated-title > div.text-top {
   border-bottom: 1vmin solid #000;
@@ -65,6 +68,13 @@ color: #4B0082;
 @keyframes showBottomText {
   0% { transform: translate3d(0, -100%, 0); }
   100% { transform: translate3d(0, 0, 0); }
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .animated-title {
+        overflow: auto;
+    }
 }
 
 /* social media */
@@ -144,3 +154,5 @@ img:hover {
     padding-top: 1.9%;
     height: 450px;
 }
+
+
