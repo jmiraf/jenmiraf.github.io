@@ -1,15 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'> 
-
-      <title>Lightbox Project</title>
-      <link rel="icon" href="images/logo.png">
-      <style>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
@@ -150,45 +142,119 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
-  </head>
-  <body>
-      <div id="Welcome">
-        <!---Navigation -->
-        <nav class="navbar navbar-expand-lg navbar fixed-top  navbar-light bg-light">
-        <a class="navbar-brand" href="#Welcome">
-            <img src="images/logo2.png" height="40" alt=""> 
-        </a>
-        <div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#Welcome">Home</a>
-                </li>
-            <li class="nav-item">
-                  <a class="nav-link" href="#Video">Video</a>
-                </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Accomodations">Accomodations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Food">Restaurants</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contact">Contact</a>
-              </li>
+<body>
 
-            </ul>
-        </div>
-      
-        
-      </nav>
-      <!-- End Navigation -->
+<h2 style="text-align:center">Lightbox</h2>
 
-            
-      <!--- Video -->
+<div class="row">
+  <div class="column">
+    <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<br><br>
+
+<!--- Video -->
     <div class="container">
     
       <div class="row" id="Video">
         <div class="col navMenu">
+          <br>
             <h2 class="text-center" >~ About Banff National Park ~</h2>
         </div>
       </div>
@@ -258,112 +324,6 @@ img.hover-shadow {
         </div>
         <!--- End of Accomodations -->
       
-<!-- LightBox -->
-
-            <div class="row">
-              <div class="column">
-                <img src="images/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-              </div>
-              <div class="column">
-                <img src="images/img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-              </div>
-              <div class="column">
-                <img src="images/img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-              </div>
-              <div class="column">
-                <img src="images/img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-              </div>
-            </div>
-            
-            <div id="myModal" class="modal">
-              <span class="close cursor" onclick="closeModal()">&times;</span>
-              <div class="modal-content">
-            
-                <div class="mySlides">
-                  <div class="numbertext">1 / 4</div>
-                  <img src="images/img_nature_wide.jpg" style="width:100%">
-                </div>
-            
-                <div class="mySlides">
-                  <div class="numbertext">2 / 4</div>
-                  <img src="images/img_snow_wide.jpg" style="width:100%">
-                </div>
-            
-                <div class="mySlides">
-                  <div class="numbertext">3 / 4</div>
-                  <img src="images/img_mountains_wide.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides">
-                  <div class="numbertext">4 / 4</div>
-                  <img src="images/img_lights_wide.jpg" style="width:100%">
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-                <div class="caption-container">
-                  <p id="caption"></p>
-                </div>
-            
-            
-                <div class="column">
-                  <img class="demo cursor" src="images/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                </div>
-                <div class="column">
-                  <img class="demo cursor" src="images/img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                </div>
-              </div>
-            </div>
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-
-            <!-- end of LightBox -->
-
-
         <!--- Start of Food-->
       <div class="row" id="Food">
         <div class="col navMenu">
@@ -461,14 +421,8 @@ function showSlides(n) {
       
     </div>
     
-      <footer>
-          <div>
-            <em><p align="right">Credits to <a href="https://onepagelove.com/ristorante" target="new">Ristorante</a> for the design inspiration</p></em>
-          </div>
-            
-      </footer>
-        
+
+
     
-  
-    </body>
+</body>
 </html>
