@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>	
+
+    	<title>HTML Project</title>
+    	<link rel="icon" href="images/logo.png">
+	</head>
+	<body>
+	  	<div id="Welcome">
+	  		<!---Navigation -->
+	    	<nav class="navbar navbar-expand-lg navbar fixed-top  navbar-light bg-light">
+		 		<a class="navbar-brand" href="#Welcome">
+    				<img src="images/logo2.png" height="40" alt=""> 
+		 		</a>
+				<div>
+			    	<ul class="navbar-nav ml-auto">
+			      		<li class="nav-item">
+			        		<a class="nav-link" href="#Welcome">Home</a>
+			      		</li>
+						<li class="nav-item">
+			        		<a class="nav-link" href="#Video">Video</a>
+			      		</li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="#Accomodations">Accomodations</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="#Food">Restaurants</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="#Contact">Contact</a>
+					    </li>
+
+				    </ul>
+				</div>
+			
+				
+			</nav>
+			<!-- End Navigation -->
+
+            <!-- LightBox -->
+
+            <div class="row">
+              <div class="column">
+                <img src="images/img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="images/img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="images/img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+              </div>
+              <div class="column">
+                <img src="images/img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+              </div>
+            </div>
+            
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+            
+                <div class="mySlides">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="images/img_nature_wide.jpg" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="images/img_snow_wide.jpg" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="images/img_mountains_wide.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="images/img_lights_wide.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+            
+            
+                <div class="column">
+                  <img class="demo cursor" src="images/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+              </div>
+            </div>
+
+            <script src="JS/one_page_website.js"></script>
+
+            <!-- end of LightBox -->
+
+			<!--- Video -->
+		<div class="container">
+		
+			<div class="row" id="Video">
+				<div class="col navMenu">
+	     		 	<h2 class="text-center" >~ About Banff National Park ~</h2>
+				</div>
+			</div>
+			<div class="row bg-light" >
+				<table border="0" cellspacing="15px" cellpadding="15px">
+					<tr>
+						<td width="300">&nbsp;</td>
+						<td>
+							<div>
+								<iframe width="800" height="500" src="https://www.youtube.com/embed/D2NWsToncNM?si=-rP20XruKdBrTolq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+						</td>
+						<td width="300">&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+			
+			<!--- End of Video -->
+			
+
+			<!--- Accomodations-->
+		
+		 	<div class="row" id="Accomodations">
+	    		<div class="col navMenu">
+	     		 	<h2 class="text-center" >~ Accomodations~</h2>
+	    		</div>
+  			</div>
+  			<div class="row bg-light" >
+  				<div class="col-md-6">
+  					<h3>Cabins</h3>
+  					<p>Experience the serenity and quintessential Canadian charm of waking up in a log cabin in Banff National Park. The ultimate pick for a cozy retreat, a visit to one of the many cabins and chalets in Banff and Lake Louise is ideal for a peaceful long weekend escape or romantic getaway.</p>
+  				</div>
+  				<div>
+  					<img src="images/cabin.jpeg" width="500" alt="Baker Creek">
+  				</div>
+  			</div>
+  			<div class="row bg-light"><br></div>
+  			<div class="row bg-light">
+  				<div>
+  					<img src="images/Fairmont.jpg" width="500" alt="Fairmont Hotel">&nbsp;&nbsp;&nbsp;&nbsp;
+  				</div>
+  				<div class="col-md-6">
+  					<h3>Hotels</h3>
+  					<p>There’s a wide range of places to stay in Banff National Park, where you’ll be spoiled for choice when it comes to unique locations, breathtaking views and luxurious amenities. With so many hotels to choose from, you’re sure to find the ideal spot to call home base during your stay here.</p>
+  				</div>
+  			</div>
+			<div class="row bg-light"><br></div>
+			<div class="row bg-light" >
+  				<div class="col-md-6">
+  					<h3>Bed & Breakfast</h3>
+  					<p>Experiencing a cozy bed and breakfast in Banff and Lake Louise brings a uniquely warm and personal element to your stay. Each bed and breakfast in the area has its own distinct charm and character, run by owners that are delighted to share their love of Banff National Park with guests. During your visit, you’re sure to pick up their favourite tips on the best spots to eat, shop, and play - a special perk of staying with the friendly locals.</p>
+  				</div>
+  				<div>
+  					<img src="images/BBerry-eve.jpg" width="500" alt="Buffalo Berry">
+  				</div>
+  			</div>
+  			<div class="row bg-light"><br></div>
+  			<div class="row bg-light">
+  				<div>
+  					<img src="images/camping.jpg" width="500">&nbsp;&nbsp;&nbsp;&nbsp;
+					<br><br>
+  				</div>
+  				<div class="col-md-6">
+  					<h3>Camping</h3>
+  					<p>Camping in Banff and Lake Louise is a great way to immerse yourself in the stunning scenery of Banff National Park. Frontcountry sites offer the joys of sitting by a campfire and relaxing near the lake with the convenience of full amenities and washrooms close by. Adventurous spirits who crave the experience of sleeping under the stars in remote places will enjoy one of the many backcountry Parks Canada campsites. For the comforts of home on wheels, there are a number of full-service campgrounds where you can park and plug in your recreational vehicle.</p><br>
+  				</div>
+  			</div>
+  			<!--- End of Accomodations -->
+			
+  			<!--- Start of Food-->
+			<div class="row" id="Food">
+				<div class="col navMenu">
+	     		 	<h2 class="text-center" >~ Restaurants ~</h2>
+				</div>
+			</div>
+			<div class="row bg-light" >
+				<table border="0" cellspacing="15px" cellpadding="15px">
+					<tr>
+						<th><img src="images/cliffhouse.jpg" width="350"></th>
+						<th><img src="images/fairview.jpg" width="350"></th>
+						<th><img src="images/whitehorn.jpg" width="350"></th>
+					</tr>
+					<tr style="height:200px">
+						<td valign="top"><h5 class="card-title">Cliffhouse Bristro</h5>
+							<details>
+								<summary>Click to see details</summary>
+								<p>Mt Norquay Road<br>
+								(+1) 403-762-4421<br>
+							 	<a href="https://banffnorquay.com/dining/cliffhouse-bistro/" target="new">Website</a>
+								</p>
+							</details>
+						</td>
+						<td valign="top"><h5 class="card-title">Fairview Bar</h5>
+							<details>
+								<summary>Click to see details</summary>
+								<p>Fairmont Chateau<br>
+								(+1) 866-540-4413<br>
+							 	<a href="https://www.chateau-lake-louise.com/dine/?category=restaurants" target="new">Website</a>
+								</p>
+							</details>
+						</td>
+						<td valign="top"><h5 class="card-title">Whitehorn Bistro</h5>
+							<details>
+								<summary>Click to see details</summary>
+								<p>Whitehorn Road<br>
+								(+1) 403-522-3555<br>
+							 	<a href="https://www.skilouise.com/dining/on-mountain-dining/whitehorn-bistro/" target="new">Website</a>
+								</p>
+							</details>
+							
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<!--- End of Food -->
+			
+			<!--- Contact-->
+			<div class="row" id="Contact">
+				<div class="col navMenu">
+	     		 	<h2 class="text-center">~ Feedback ~</h2>
+				</div>
+			</div>
+
+			<div class="row bg-light">
+				<div class="col">
+					<form>
+						<div class="form-row">
+						  	<div class="form-group col-6">
+						  		<h3>&nbsp;</h3>
+						  		<label for="inputName"> Name</label>
+						  		<input type="text" class="form-control" id="inputName" placeholder="Name">
+						  	</div>
+						  	<div class="form-group col-6">
+						  		<h3>&nbsp;</h3>
+						  		<label for="inputEmail"> Email</label>
+						  		<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+						  	</div>
+						  	<div class="form-group col-6">
+						  		<label for="inputCel"> Phone</label>
+						  		<input type="tel" class="form-control" id="inputCel" placeholder="Phone">
+						  	</div>
+						  	<div class="form-group col-6">
+						  		<h3>&nbsp;</h3>
+						  	</div>
+
+  							<div class="form-group col-12">
+  								<label for="inputComment"> Comments</label>
+								<textarea class="form-control" rows="4" id="inputComment" placeholder="Add your comments here"></textarea>
+							</div>
+					 	</div>
+						<div class="row">
+					  		<div class="col-md-4 col-md-offset-4">
+					  			<button type="submit" class="btn btn-secondary btn-block">Submit</button>
+								<br><br><br><br>
+					  		</div>
+					  	</div>
+					</form>
+					
+				</div>
+						
+			</div>
+			<!--- End of Contact -->
+			
+		</div>
+		
+			<footer>
+					<div>
+						<em><p align="right">Credits to <a href="https://onepagelove.com/ristorante" target="new">Ristorante</a> for the design inspiration</p></em>
+					</div>
+						
+			</footer>
+				
+		
+	
+  	</body>
+</html>
