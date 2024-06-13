@@ -3,15 +3,17 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>	
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Jenilyn Mirafuente Portfolio</title>
-  </head>
+    <title>Jenilyn Mirafuente</title>
+	
+</head>
+	
   <body style="background-color:silver;">
     <div class="container">
 		<!-- Navbar -->
@@ -19,19 +21,19 @@
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item active">
-				<a class="nav-link text-warning" href="#Home"><h3>Home</h3></a>
+				<a class="nav-link text-warning" href="#Home"><h5>Home </h5></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-warning" href="#About"><h3>About</h3></a>
+				<a class="nav-link text-warning" href="#About"><h5>About </h5></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-warning" href="#Work"><h3>Experience</h3></a>
+				<a class="nav-link text-warning" href="#Work"><h5>Slideshow </h5></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-warning" href="#Projects"><h3>Projects</h3></a>
+				<a class="nav-link text-warning" href="#Projects"><h5>Projects </h5></a>
 			  </li>
 				<li class="nav-item">
-				<a class="nav-link text-warning" href="#Contact"><h3>Contact</h3></a>
+				<a class="contact nav-link text-warning" href="#Contact" onclick="openForm()" ondblclick="closeForm()"><h5>Contact </h5></a>
 			  </li>
 
 			</ul>
@@ -53,9 +55,9 @@
         
 		<div class="relative" id="Home">
 			<video width="1110px" autoplay muted loop>
-				<source src="images/video/colorful.mp4" type="video/mp4">
+					<source src="images/video/colorful.mp4" type="video/mp4">
 			</video>
-        	</div>
+        </div>
 		
 		<!--Text animation-->
 		<div class="animated-title">
@@ -81,25 +83,81 @@
 				<p>I have a Bachelor's Degree in Computer Engineering and currently taking up the Sofware and Web Development diploma course at <a href="https://academyoflearningalberta.ca/" target="_blank">Academy of Learning Career College</a>. </p>
 				<p>I build things for the web. I have years of work experience in Oracle and NetSuite platforms in the areas of product, project, and support management. </p>
 				<p>Outside work, I enjoy traveling and road tripping with my family. </p>
-				<p class="font-weight-bold"><a href="#Contact" class="text-success">Get in touch</a> 
-				<br><br></p>
+				<p class="font-weight-bold">
+				<a class="contact text-success" href="#Contact" onclick="openForm()" ondblclick="closeForm()">Get in touch</a><br><br>
+				</p>
+			
 			  </div>
 			</div>
+		
 
-			<div class="row px-2">
-			<div class="col-sm-3">
-				<h4>Languages</h4>
-				<ul class="list-group list-group-flush bg-light">
-				  <li class="list-group-item bg-light">HTML</li>
-				  <li class="list-group-item">CSS</li>
-				  <li class="list-group-item bg-light">Bootstrap</li>
-				  <li class="list-group-item">Javascript</li>
-				  <li class="list-group-item bg-light">Python</li>
-				</ul>
+        <!-- Slideshow section added -->
+		<div id="Work">
+        <div id="Slideshow">
+            <div id="Slideshow_Background" class="bg-light"> 
+			<h3 align="center">S K I L L S</h3>
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/html.png" alt="HTML">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 2 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/css-icon.png" alt="CSS"> 
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 3 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/javascript-icon.png" alt="JavaScript">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 4 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/boostrap.png" alt="Bootstrap">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 5 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Python-Symbol.png" alt="Python"> 
+                        <div class="text"></div>
+                    </div>
+
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+				<!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+		</div>
+		
+ <script src="JS/portfolio.js"></script>
+ 
+ 
+<br><br>
+		<div class="row px-2" id="Projects">
+			<div class="col-sm-4 bg-dark text-white mb-3">
+			<br>
+				<h3>GitHub</h3>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://jmiraf.github.io/jenmiraf.github.io/" target="_blank">My Github</a></p>
+					<a href="https://jmiraf.github.io/jenmiraf.github.io/" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                </p>
 			</div>
-			<!--Work Experience-->
-			<div class="col-sm-9 pr-0" id="Work">
-				<div class="card text-white bg-info mb-3">
+			<div class="col-sm-8 pr-0">
+				<div class="card bg-warning mb-3">
 				  <div class="card-header font-weight-bold"><h3>Work Experience</h3></div>
 				  <div class="card-body">
 					<h5 class="card-title">Project Manager</h5>
@@ -108,79 +166,85 @@
 					<div class="card-body">
 					<h5 class="card-title">Test Engineer</h5>
 					<p class="card-text">Develop and execute test plans to validate software functionality against requirements and specifications. Identify, report, and track software defects and issues. </p>
+					<p><br></p>
 				  </div>
 				</div>
 			</div>
 		</div>
-
-
-	<!--GitHub section-->
-        <div class="Row" id="Projects">
-            <!--Left column-->
-            <div class="Column_1 bg-light">
-                <h3>GitHub</h3>
-                <p>
-                    You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://jmiraf.github.io/jenmiraf.github.io/" target="_blank">My Github</a></p>
-					<a href="https://jmiraf.github.io/jenmiraf.github.io/" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
-                </p>
-            </div>
-            <!--Form section-->
-            <div class="Column_2 bg-light">
-				<div class="card-body" id="Contact">
-					<form>
-					<h1 class="text-primary">CONTACT</h1>
-					  <div class="form-group">
-						<label for="inputName">Name</label>
-						<input type="text" class="form-control" id="inputName" placeholder="Name">
-					  </div>
-					  <div class="form-group">
-						<label for="inputEmail3">Email</label>
-						  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-					  </div>
-						<div class="form-group">
-						 <label for="exampleFormControlTextarea1">Message</label>
-						   <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Please write your message here"></textarea>
-					  </div>
-					  <div class="form-group">
-						  <button type="submit" class="btn btn-primary">Submit</button>
-					  </div>
-					</form>
-				</div>
-			</div>
-
-		</div>
+ 
 				
-		<!--Placeholders-->
+		<!-- Placeholder -->
 		<div class="row px-5 my-5">
 			<div class="col">
-				<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">  
+				<div class="card" style="max-width: 18rem;">  
+				<img src="images/placeholder.jpg" class="card-img-top" alt="placeholder">
+				
 				  <div class="card-body">
-					<h5 class="card-title">EDUCATION</h5>
+					<h5 class="card-title">Card title</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn btn-primary">Link</a>
 				  </div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+				<div class="card" style="max-width: 18rem;">  
+				<img src="images/placeholder.jpg" class="card-img-top" alt="placeholder">
+				
 				  <div class="card-body">
-					<h5 class="card-title">SKILLS</h5>
+					<h5 class="card-title">Card title</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn bg-danger text-white">Link</a>
 				  </div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+				<div class="card" style="max-width: 18rem;">  
+				<img src="images/placeholder.jpg" class="card-img-top" alt="placeholder">
+				
 				  <div class="card-body">
-					<h5 class="card-title">CERTIFICATIONS</h5>
+					<h5 class="card-title">Card title</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn bg-success text-white">Link</a>
 				  </div>
 				</div>
 			</div>
 		  </div>
 	</div>
-	
+	<br>
+	<br>
+	<br>
+	<!-- Popup Contact form -->
+        <div class="card-body" id="Contact">
+		<button onclick="openForm()" class="Pop_Up_Button btn btn-dark">C O N T A C T</button>
+           <div class="form-popup" id="myForm">
+                <form name="myForm" action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container" onsubmit="return validateForm()"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <div class="card-body">
+						
+							<h1 class="text-primary">CONTACT</h1>
+							  <div class="form-group">
+								<label for="inputName">Name</label>
+								<input type="text" class="form-control" id="inputName" placeholder="Name" name="name">
+							  </div>
+							  <div class="form-group">
+								<label for="inputEmail3">Email</label>
+								  <input type="text" class="form-control" id="inputEmail3" placeholder="Email" name="email>
+							  </div>
+							  <div class="form-group">
+								<label for="phone">Phone</label>
+								<input type="text" class="form-control" placeholder="Phone" id="phone">
+							   </div>
+								<div class="form-group">
+								 <label for="exampleFormControlTextarea1">Message</label>
+								   <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Please write your message here"></textarea>
+							  </div>
+							<div class="d-grid gap-2 d-md-block">
+							<button type="submit" class="btn btn-primary btn-lg">SUBMIT</button>
+							<button type="button" class="btn btn-dark btn-lg" onclick="closeForm()">CLOSE</button>	
+							</div>
+						</form>
+					</div>
+           </div>
+        </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
